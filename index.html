@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#123352" />
+  <meta name="description" content="MUET revision resources for students of Kolej Matrikulasi Melaka." />
+  <title>MUET Resource Hub | KMM</title>
+  <style>
+    :root{font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:#192c40;background:#f5f8fc;font-synthesis:none}
+    *{box-sizing:border-box}body{margin:0}a{color:inherit}button,input{font:inherit}
+    .wrapper{max-width:1024px;margin:auto;padding:24px 18px 60px}
+    header{border-radius:22px;background:linear-gradient(125deg,#102f4c,#225c83);color:white;padding:32px 30px;box-shadow:0 12px 34px #173e6420}
+    .kicker{font-size:.78rem;letter-spacing:.13em;font-weight:700;color:#c9e5f9}h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.12;margin:15px 0 10px}header p{color:#d7e7f4;line-height:1.5;margin:0}
+    .toolbar{margin:24px 0 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.toolbar h2{font-size:1.25rem;margin:0}.toolbar p{color:#607288;font-size:.91rem;margin:4px 0 0}
+    .search{min-width:210px;max-width:340px;flex:1;border:1px solid #d4e0e9;border-radius:12px;background:white;padding:12px 14px;outline-offset:3px}
+    .tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:22px}
+    .tab{border:1px solid #d8e3ec;border-radius:15px;background:#fff;text-align:left;padding:16px 14px;cursor:pointer;min-height:102px;transition:transform .15s,border-color .15s;display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+    .tab:hover{transform:translateY(-2px)}.tab[aria-selected="true"]{border:2px solid #2d739b;background:#eef7fc;padding:15px 13px}.tab .symbol{font-size:1.4rem;color:#215d83}.tab strong{display:block;font-size:1rem}.tab small{display:block;color:#607288;margin-top:3px}
+    .panel{background:white;border:1px solid #dce5ef;border-radius:18px;padding:23px;min-height:300px}.panel-heading{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:19px}.panel h3{font-size:1.25rem;margin:0}.count{color:#567087;font-size:.85rem}
+    .group{margin:21px 0 0}.group:first-of-type{margin-top:0}.group-title{font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:#52738a;font-weight:800;margin-bottom:10px}
+    .resources{display:grid;gap:10px}.resource{display:flex;align-items:center;gap:13px;text-decoration:none;border:1px solid #e0e8ee;border-radius:12px;padding:15px;transition:background .15s,border-color .15s;min-width:0}.resource:hover,.resource:focus-visible{background:#f2f8fc;border-color:#90b9d1}.file-icon{display:grid;place-items:center;background:#eaf2f8;color:#285e80;width:43px;height:43px;flex:0 0 43px;border-radius:11px;font-weight:800;font-size:.81rem}.resource-info{flex:1;min-width:0}.resource-title{font-weight:700;display:block;line-height:1.4}.resource-type{display:block;color:#61778a;font-size:.82rem;margin-top:3px}.arrow{color:#3c738f;font-size:1.18rem}
+    .empty{color:#607288;text-align:center;padding:55px 15px}.empty strong{display:block;color:#25445b;margin-bottom:9px}.empty p{max-width:440px;margin:0 auto;line-height:1.5}
+    footer{text-align:center;margin-top:24px;color:#67798a;font-size:.8rem;line-height:1.6}
+    @media(max-width:640px){.wrapper{padding:14px 13px 45px}header{padding:28px 22px}.tabs{grid-template-columns:repeat(2,minmax(0,1fr))}.tab{min-height:85px;padding:13px}.tab[aria-selected="true"]{padding:12px}.panel{padding:17px}.toolbar{align-items:stretch}.search{max-width:none;width:100%;flex-basis:100%}}
+    @media(prefers-reduced-motion:reduce){.tab,.resource{transition:none}}
+  </style>
+</head>
+<body>
+  <main class="wrapper">
+    <header><div class="kicker">KOLEJ MATRIKULASI MELAKA · ENGLISH UNIT</div><h1>MUET Resource Hub</h1><p>Your revision materials, organised in one place.<br>Choose a skill, explore the resources and revise at your own pace.</p></header>
+    <section aria-label="Learning resources">
+      <div class="toolbar"><div><h2>Revision Library</h2><p>Notes, presentations and flipbooks from class</p></div><input id="search" class="search" type="search" placeholder="Search materials…" aria-label="Search materials" /></div>
+      <div class="tabs" role="tablist" aria-label="MUET skills">
+        <button class="tab" role="tab" data-skill="writing" aria-selected="true" aria-controls="resource-panel"><span class="symbol" aria-hidden="true">✎</span><span><strong>Writing</strong><small>9 materials</small></span></button>
+        <button class="tab" role="tab" data-skill="reading" aria-selected="false" aria-controls="resource-panel"><span class="symbol" aria-hidden="true">▤</span><span><strong>Reading</strong><small>Coming soon</small></span></button>
+        <button class="tab" role="tab" data-skill="listening" aria-selected="false" aria-controls="resource-panel"><span class="symbol" aria-hidden="true">♫</span><span><strong>Listening</strong><small>Coming soon</small></span></button>
+        <button class="tab" role="tab" data-skill="speaking" aria-selected="false" aria-controls="resource-panel"><span class="symbol" aria-hidden="true">◉</span><span><strong>Speaking</strong><small>Coming soon</small></span></button>
+      </div>
+      <div class="panel" id="resource-panel" role="tabpanel" aria-live="polite"></div>
+    </section>
+    <footer>MUET Resource Hub · English Unit · Kolej Matrikulasi Melaka<br>Materials are provided for student revision. External resources open in a new tab.</footer>
+  </main>
+  <script>
+    const library = {
+      writing: [
+        {group:'Essay Writing',title:'How to Write an Argumentative Essay',type:'Flipbook',url:'https://anyflip.com/fzxmt/bppg/'},
+        {group:'Essay Writing',title:'How to Write a Disagree Essay',type:'Flipbook',url:'https://anyflip.com/fzxmt/snoy/'},
+        {group:'Essay Writing',title:'Essay Writing Refresher',type:'Presentation',url:'https://docs.google.com/presentation/d/1kDjJdEgkwyd5xeK6HETmhM4zViWVhLV7/edit'},
+        {group:'Essay Writing',title:'Essay Writing Sample Response',type:'PDF',url:'https://drive.google.com/file/d/1udVoY8NxvOyxuAoUuoBqWVODBMaxejem/view'},
+        {group:'Essay Writing',title:'Writing a Proper Body Paragraph',type:'Presentation',url:'https://docs.google.com/presentation/d/1VAQ_21MdwBtX0S_BVswxj1w1peKoEffp/edit'},
+        {group:'Essay Writing',title:'Essay Idea Expansion',type:'Presentation',url:'https://docs.google.com/presentation/d/1m9k_x4W_dkUIFy9DBWB-arhgyIgP_Q8_/edit'},
+        {group:'Email & Letter Writing',title:'MUET Email Writing',type:'Presentation',url:'https://docs.google.com/presentation/d/1776goJpw5RqI5HkLd1NdewVdc90vPH01/edit'},
+        {group:'Email & Letter Writing',title:'Respond to Every Sentence',type:'Presentation',url:'https://docs.google.com/presentation/d/1XnuVF_xGgmLLOQEdfHc-KyQFUeBGhLrM/edit'},
+        {group:'Email & Letter Writing',title:'Letter Writing',type:'Flipbook',url:'https://anyflip.com/fzxmt/xvao/'}
+      ],reading:[],listening:[],speaking:[]
+    };
+    let skill='writing';
+    const panel=document.getElementById('resource-panel');
+    const search=document.getElementById('search');
+    const escapeHtml=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    function render(){
+      const q=search.value.trim().toLowerCase();
+      const items=library[skill].filter(x=>(x.title+' '+x.group+' '+x.type).toLowerCase().includes(q));
+      const heading=skill[0].toUpperCase()+skill.slice(1);
+      let html=`<div class="panel-heading"><h3>${heading} Resources</h3><span class="count">${items.length} material${items.length===1?'':'s'}</span></div>`;
+      if(!items.length){html+=`<div class="empty"><strong>${library[skill].length?'No matching materials':'Resources coming soon'}</strong><p>${library[skill].length?'Try a different search term.':'Materials for this skill will be added here. You can use Writing resources in the meantime.'}</p></div>`;panel.innerHTML=html;return;}
+      const groups=[...new Set(items.map(x=>x.group))];
+      for(const group of groups){
+        html+=`<div class="group"><div class="group-title">${escapeHtml(group)}</div><div class="resources">`;
+        for(const item of items.filter(x=>x.group===group)){
+          const token=item.type==='PDF'?'PDF':item.type==='Flipbook'?'BOOK':'SLIDE';
+          html+=`<a class="resource" href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer"><span class="file-icon" aria-hidden="true">${token}</span><span class="resource-info"><span class="resource-title">${escapeHtml(item.title)}</span><span class="resource-type">${escapeHtml(item.type)} · Open resource</span></span><span class="arrow" aria-hidden="true">↗</span></a>`;
+        }
+        html+='</div></div>';
+      }
+      panel.innerHTML=html;
+    }
+    document.querySelectorAll('.tab').forEach(btn=>btn.addEventListener('click',()=>{
+      skill=btn.dataset.skill;document.querySelectorAll('.tab').forEach(b=>b.setAttribute('aria-selected',String(b===btn)));search.value='';render();
+    }));
+    search.addEventListener('input',render);render();
+  </script>
+</body>
+</html>
