@@ -33,9 +33,9 @@
       <div class="toolbar"><div><h2>Revision Library</h2><p>Notes, presentations and flipbooks from class</p></div><input id="search" class="search" type="search" placeholder="Search materials…" aria-label="Search materials" /></div>
       <div class="tabs" role="tablist" aria-label="MUET skills">
         <button class="tab" role="tab" data-skill="writing" aria-selected="true" aria-controls="resource-panel"><span class="symbol" aria-hidden="true">✎</span><span><strong>Writing</strong><small>9 materials</small></span></button>
-        <button class="tab" role="tab" data-skill="reading" aria-selected="false" aria-controls="resource-panel"><span class="symbol" aria-hidden="true">▤</span><span><strong>Reading</strong><small>Coming soon</small></span></button>
-        <button class="tab" role="tab" data-skill="listening" aria-selected="false" aria-controls="resource-panel"><span class="symbol" aria-hidden="true">♫</span><span><strong>Listening</strong><small>Coming soon</small></span></button>
-        <button class="tab" role="tab" data-skill="speaking" aria-selected="false" aria-controls="resource-panel"><span class="symbol" aria-hidden="true">◉</span><span><strong>Speaking</strong><small>Coming soon</small></span></button>
+        <button class="tab" role="tab" data-skill="reading" aria-selected="false" aria-controls="resource-panel"><span class="symbol" aria-hidden="true">▤</span><span><strong>Reading</strong><small>1 material</small></span></button>
+        <button class="tab" role="tab" data-skill="listening" aria-selected="false" aria-controls="resource-panel"><span class="symbol" aria-hidden="true">♫</span><span><strong>Listening</strong><small>4 materials</small></span></button>
+        <button class="tab" role="tab" data-skill="speaking" aria-selected="false" aria-controls="resource-panel"><span class="symbol" aria-hidden="true">◉</span><span><strong>Speaking</strong><small>2 materials</small></span></button>
       </div>
       <div class="panel" id="resource-panel" role="tabpanel" aria-live="polite"></div>
     </section>
@@ -53,7 +53,17 @@
         {group:'Email & Letter Writing',title:'MUET Email Writing',type:'Presentation',url:'https://docs.google.com/presentation/d/1776goJpw5RqI5HkLd1NdewVdc90vPH01/edit'},
         {group:'Email & Letter Writing',title:'Respond to Every Sentence',type:'Presentation',url:'https://docs.google.com/presentation/d/1XnuVF_xGgmLLOQEdfHc-KyQFUeBGhLrM/edit'},
         {group:'Email & Letter Writing',title:'Letter Writing',type:'Flipbook',url:'https://anyflip.com/fzxmt/xvao/'}
-      ],reading:[],listening:[],speaking:[]
+            ],reading:[
+['Reading Part 5','Gapped Text Explanation','Presentation','https://docs.google.com/presentation/d/1T0yEOkVP3mcnlrNgta5Zilmm-OSrIxoZ/edit?slide=id.p1#slide=id.p1']
+],listening:[
+['Listening Lessons','Listening Lesson','Presentation','https://docs.google.com/presentation/d/1O2JxfwXIp0N93CjQlt5aeOKWl1cN6f_8/edit'],
+['Listening Lessons','Listening Lesson 02','Presentation','https://docs.google.com/presentation/d/1wzJxhNo4U0cpG2arFwmgG7RNcnEH-QvR/edit'],
+['Listening Practice 2026/2027','Listening Practice Questions 2026/2027','Google Form','https://forms.gle/VBggHwvNK7sjL4e98'],
+['Listening Practice 2026/2027','Listening Practice Audio 2026/2027','Audio','https://drive.google.com/file/d/1wciDrR4X1bq7hiq7T3NdEaFFJBne67xY/view']
+],speaking:[
+['Speaking Part 1','MUET Speaking Part 1','Flipbook','https://anyflip.com/fzxmt/bovb/'],
+['Speaking Part 2','Tackling MUET Speaking Part 2','Presentation','https://docs.google.com/presentation/d/1KIk476magGxcTU_dTOBgjW-tjhjXy9Qt/edit?slide=id.p1#slide=id.p1']
+]
     };
     let skill='writing';
     const panel=document.getElementById('resource-panel');
