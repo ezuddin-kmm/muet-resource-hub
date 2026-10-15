@@ -54,15 +54,15 @@
         {group:'Email & Letter Writing',title:'Respond to Every Sentence',type:'Presentation',url:'https://docs.google.com/presentation/d/1XnuVF_xGgmLLOQEdfHc-KyQFUeBGhLrM/edit'},
         {group:'Email & Letter Writing',title:'Letter Writing',type:'Flipbook',url:'https://anyflip.com/fzxmt/xvao/'}
             ],reading:[
-['Reading Part 5','Gapped Text Explanation','Presentation','https://docs.google.com/presentation/d/1T0yEOkVP3mcnlrNgta5Zilmm-OSrIxoZ/edit?slide=id.p1#slide=id.p1']
+{group:'Reading Part 5',title:'Gapped Text Explanation',type:'Presentation',url:'https://docs.google.com/presentation/d/1T0yEOkVP3mcnlrNgta5Zilmm-OSrIxoZ/edit?slide=id.p1#slide=id.p1'}
 ],listening:[
-['Listening Lessons','Listening Lesson','Presentation','https://docs.google.com/presentation/d/1O2JxfwXIp0N93CjQlt5aeOKWl1cN6f_8/edit'],
-['Listening Lessons','Listening Lesson 02','Presentation','https://docs.google.com/presentation/d/1wzJxhNo4U0cpG2arFwmgG7RNcnEH-QvR/edit'],
-['Listening Practice 2026/2027','Listening Practice Questions 2026/2027','Google Form','https://forms.gle/VBggHwvNK7sjL4e98'],
-['Listening Practice 2026/2027','Listening Practice Audio 2026/2027','Audio','https://drive.google.com/file/d/1wciDrR4X1bq7hiq7T3NdEaFFJBne67xY/view']
+{group:'Listening Lessons',title:'Listening Lesson',type:'Presentation',url:'https://docs.google.com/presentation/d/1O2JxfwXIp0N93CjQlt5aeOKWl1cN6f_8/edit'},
+{group:'Listening Lessons',title:'Listening Lesson 02',type:'Presentation',url:'https://docs.google.com/presentation/d/1wzJxhNo4U0cpG2arFwmgG7RNcnEH-QvR/edit'},
+{group:'Listening Practice 2026/2027',title:'Listening Practice Questions 2026/2027',type:'Google Form',url:'https://forms.gle/VBggHwvNK7sjL4e98'},
+{group:'Listening Practice 2026/2027',title:'Listening Practice Audio 2026/2027',type:'Audio',url:'https://drive.google.com/file/d/1wciDrR4X1bq7hiq7T3NdEaFFJBne67xY/view'}
 ],speaking:[
-['Speaking Part 1','MUET Speaking Part 1','Flipbook','https://anyflip.com/fzxmt/bovb/'],
-['Speaking Part 2','Tackling MUET Speaking Part 2','Presentation','https://docs.google.com/presentation/d/1KIk476magGxcTU_dTOBgjW-tjhjXy9Qt/edit?slide=id.p1#slide=id.p1']
+{group:'Speaking Part 1',title:'MUET Speaking Part 1',type:'Flipbook',url:'https://anyflip.com/fzxmt/bovb/'},
+{group:'Speaking Part 2',title:'Tackling MUET Speaking Part 2',type:'Presentation',url:'https://docs.google.com/presentation/d/1KIk476magGxcTU_dTOBgjW-tjhjXy9Qt/edit?slide=id.p1#slide=id.p1'}
 ]
     };
     let skill='writing';
@@ -79,7 +79,7 @@
       for(const group of groups){
         html+=`<div class="group"><div class="group-title">${escapeHtml(group)}</div><div class="resources">`;
         for(const item of items.filter(x=>x.group===group)){
-          const token=item.type==='PDF'?'PDF':item.type==='Flipbook'?'BOOK':'SLIDE';
+          const token=item.type==='PDF'?'PDF':item.type==='Flipbook'?'BOOK':item.type==='Audio'?'AUDIO':item.type==='Google Form'?'FORM':'SLIDE';
           html+=`<a class="resource" href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer"><span class="file-icon" aria-hidden="true">${token}</span><span class="resource-info"><span class="resource-title">${escapeHtml(item.title)}</span><span class="resource-type">${escapeHtml(item.type)} · Open resource</span></span><span class="arrow" aria-hidden="true">↗</span></a>`;
         }
         html+='</div></div>';
